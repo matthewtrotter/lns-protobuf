@@ -1,6 +1,8 @@
 # lns-protobuf
 This is a sandbox for [Google Protobuf](https://developers.google.com/protocol-buffers/docs/pythontutorial). This demo demonstrates sending alerts with common data as well as alert-specific data. And, the demo shows how the client can gracefully handle an alert that it has never seen before.
 
+The client has an original definition of alerts [lnsalerts.proto](https://github.com/matthewtrotter/lns-protobuf/blob/main/lnsalerts.proto), and the LNS has an updated definition of alerts [lnsalerts2.proto](https://github.com/matthewtrotter/lns-protobuf/blob/main/lnsalerts2.proto) with one extra type of alert. When the LNS sends the new alert, the client receives the common info but cannot parse the alert-specific data.
+
 ## Setup
 First, install the protobuf compiler for your system:
 1. On MacOS, run `brew install protobuf`
